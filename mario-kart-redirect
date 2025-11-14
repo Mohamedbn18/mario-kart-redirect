@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>جاري التحويل...</title>
+  <script>
+    (function() {
+      const ua = navigator.userAgent.toLowerCase();
+      const android = "https://play.google.com/store/apps/details?id=com.nintendo.zaka";
+      const ios = "https://apps.apple.com/us/app/mario-kart-tour/id1293634699";
+      const fallback = "https://mariokarttour.com";
+
+      if (ua.includes('android')) {
+        window.location.replace(android);
+      } else if (ua.includes('iphone') || ua.includes('ipad') || ua.includes('ipod')) {
+        window.location.replace(ios);
+      } else {
+        window.location.replace(fallback);
+      }
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>
